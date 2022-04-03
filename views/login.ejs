@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<%- include('./partials/message.ejs') %>
+<div>
+    <form action="/user/login" method="post"> 
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name='email' placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name='password' placeholder='Enter Password' value="<%= typeof password != 'undefined' ? password :''%>">
+    </div>
+     <button type="submit" class='btn btn-primary' >Login</button>
+    </form>
+</div>
+<a href="/user/register">Register?</a>
